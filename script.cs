@@ -18,35 +18,57 @@ List<string> karakterer = new List<string>();
 Console.Write("Skriv inn Student nummer: ");
 string? brukerInput = Console.ReadLine();
 
-if (brukerInput != null && StudentRegister.ContainsKey(brukerInput))
+Console.Write("Vil du sette inn karakterer til denne studenten? (y/n): ");
+string? karakterInput = Console.ReadLine();
+
+if (karakterInput.ToLower() == "y".ToLower())
+{
+
+if (StudentRegister.ContainsKey(brukerInput))
 {
 
     Console.WriteLine("Skriv inn karakterer: ");
 
-while (true)
-    {
-
-    foreach (string fagkode in fagkoder)
+    while (true)
         {
-            Console.Write($"{fagkode}: ");
-            string? karakter = Console.ReadLine();
-            karakterer.Add($"{fagkode}: {karakter}");
-        }
 
-        break;
+        foreach (string fagkode in fagkoder)
+            {
+                Console.Write($"{fagkode}: ");
+                string? karakter = Console.ReadLine();
+                karakterer.Add($"{fagkode}: {karakter}");
+            }
+
+            break;
+        } 
+
+        Console.WriteLine("\nStudent ID: ");
+        Console.WriteLine($"Navn: {StudentRegister[brukerInput][0]}");
+        Console.WriteLine($"Alder: {StudentRegister[brukerInput][1]}");
+        Console.WriteLine($"Student nummer: {StudentRegister[brukerInput][2]}\n");
+        
+        Console.WriteLine("Karakterer: ");
+        Console.WriteLine($"{karakterer[0]}");
+        Console.WriteLine($"{karakterer[1]}");
+        Console.WriteLine($"{karakterer[2]}");
+        Console.WriteLine($"{karakterer[3]}");
+
     } 
-
+    else 
+    {
+        Console.WriteLine("Fant ikke student.");
+    }
+} 
+else if (karakterInput.ToLower() == "n".ToLower())
+{
     Console.WriteLine("Student ID: ");
     Console.WriteLine($"Navn: {StudentRegister[brukerInput][0]}");
     Console.WriteLine($"Alder: {StudentRegister[brukerInput][1]}");
     Console.WriteLine($"Student nummer: {StudentRegister[brukerInput][2]}");
 
-    Console.WriteLine($"{karakterer[0]}");
-    Console.WriteLine($"{karakterer[1]}");
-    Console.WriteLine($"{karakterer[2]}");
-    Console.WriteLine($"{karakterer[3]}");
-
-} else 
+    Console.WriteLine("Karakterer: Ikke oppgitt");
+}
+else
 {
-    Console.WriteLine("Fant ikke student.");
+    Console.WriteLine("Velg enten y eller n");
 }
