@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sequence-lekse", "sequence-lekse.csproj", "{E2686E58-D52D-4510-9C8F-444CA18E861F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2686E58-D52D-4510-9C8F-444CA18E861F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2686E58-D52D-4510-9C8F-444CA18E861F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2686E58-D52D-4510-9C8F-444CA18E861F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2686E58-D52D-4510-9C8F-444CA18E861F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {754DD335-0394-46F5-B782-7C0AB4F3A036}
+	EndGlobalSection
+EndGlobal
